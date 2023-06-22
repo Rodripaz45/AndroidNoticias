@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/baseline_home_24"/>
+
+    <item
+        android:id="@+id/sports"
+        android:title="Sports"
+        android:icon="@drawable/baseline_sports_soccer_24"/>
+
+    <item
+        android:id="@+id/fab"
+        android:title=""
+        android:enabled="false"
+        android:visible="false"/>
+
+    <item
+        android:id="@+id/business"
+        android:title="Business"
+        android:icon="@drawable/baseline_business_24"/>
+
+    <item
+        android:id="@+id/science"
+        android:title="Science"
+        android:icon="@drawable/baseline_science_24"/>
+
+</menu>
