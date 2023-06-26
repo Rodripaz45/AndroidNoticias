@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     Button btnLogOut;
     private SharedPrefsUtil sharedPrefsUtil;
     private FloatingActionButton floatButton;
+    Button btnMisNoticias;
 
 
 
@@ -37,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         binding.bottomNavigationView.setBackground(null);
         btnLogOut = findViewById(R.id.btnLogOut);
         floatButton = findViewById(R.id.floatButton);
+        btnMisNoticias = findViewById(R.id.btnMisNoticias);
         sharedPrefsUtil = new SharedPrefsUtil(MainActivity.this);
         floatButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +56,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnMisNoticias.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                replaceFragment(new FabFragment());
+            }
+        });
         String selectedValue = sharedPrefsUtil.getString("rol");
 
         if (selectedValue != null) {
@@ -67,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
                 contexto.ejecutarEstrategia();
                 MenuItem fabMenuItem = binding.bottomNavigationView.getMenu().findItem(R.id.fab);
                 fabMenuItem.setVisible(true);
-                fabMenuItem.setEnabled(true);
             }
         } else {
             EstrategiaLector lector = new EstrategiaLector(this);

@@ -40,7 +40,7 @@ public class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.Articl
     @Override
     public void onBindViewHolder(@NonNull ArticlesViewHolder holder, int position) {
         Articles articles = articlesList.get(position);
-        holder.txtTitulo.setText(articles.title + articles.url);
+        holder.txtTitulo.setText(articles.title);
         holder.bindArticles(articles);
         Picasso.get()
                 .load(articles.urlToImage)
@@ -81,7 +81,7 @@ public class ArticlesAdapter extends RecyclerView.Adapter<ArticlesAdapter.Articl
         }
         public void bindArticles(Articles articles) {
             currentArticles = articles; // Asignar la noticia actual al ViewHolder
-            txtTitulo.setText(articles.title + articles.url);
+            txtTitulo.setText(articles.title);
         }
     }
 }

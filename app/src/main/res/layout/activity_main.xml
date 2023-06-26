@@ -17,6 +17,14 @@
         android:drawableRight="@drawable/baseline_logout_24"
         tools:ignore="SpeakableTextPresentCheck" />
 
+    <Button
+        android:id="@+id/btnMisNoticias"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:text="Mis Noticias"
+        tools:ignore="SpeakableTextPresentCheck" />
+
     <FrameLayout
         android:id="@+id/frame_layout"
         android:layout_width="match_parent"
@@ -48,9 +56,9 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/white"
         android:src="@drawable/baseline_add_24"
+        android:visibility="invisible"
         app:layout_anchor="@id/bottomAppBar"
         app:maxImageSize="40dp"
-        app:tint ="@color/lavender"
-        android:visibility="invisible"/>
+        app:tint="@color/lavender" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
